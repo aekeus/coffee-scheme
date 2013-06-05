@@ -22,3 +22,5 @@ t.ok e3.find('d')['d'], 'update works'
 ge = new GlobalEnvironment()
 t.ok ge.find('+')?, 'global environment constructed'
 t.ok ge.find('+')['+'](1, 2) is 3, 'global methods installed'
+
+t.done()
