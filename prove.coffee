@@ -7,5 +7,6 @@ for f in files
   do (f) ->
     child = exec "coffee t/#{f}", (err, stdout, stderr) ->
       console.log "#{f}"
-      console.log stdout
+      o = stdout
+      console.log o
       console.log stderr if stderr?
