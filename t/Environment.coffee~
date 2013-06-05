@@ -1,2 +1,0 @@
-t = require '../lib/tester.coffee'
-Environment = require('../lib/env.coffee').Environment
