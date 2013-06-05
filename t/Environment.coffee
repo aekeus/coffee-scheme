@@ -8,7 +8,7 @@ t.ok e1.find('a')['a'] is 1, 'find works'
 try
   e1.find('b')
 catch error
-  t.ok error.toString().match(/TypeError: Cannot call method 'find' of undefined/), 'find fails'
+  t.ok error.toString().match(/symbol not found/), 'find fails'
 
 e2 = new Environment ['b'], [2], e1
 

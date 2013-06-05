@@ -8,7 +8,10 @@ class Environment
     if @[v]?
       @
     else
-      @.outer.find v
+      if @.outer?
+        @.outer.find v
+      else
+        throw "symbol not found #{v}"
 
   update: (o) ->
     for k, v of o
