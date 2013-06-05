@@ -3,10 +3,14 @@ Symbol      = require('../lib/symbol.coffee').Symbol
 
 evaluate = (x, env) ->
   if x instanceof Symbol
+    # instance of Symbols will return the current binding
+    # within the hierarchy of environments for that Symbol
     env.find(x)[x]
   else if x not instanceof Array
+    # anything else (that is not an Array) is returned
     x
   else if x[0] is 'quote'
+    # return the thing quoted for a quote expression
     x[1]
   else if x[0] is 'if'
     [i, test, conseq, alt] = x
