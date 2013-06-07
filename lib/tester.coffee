@@ -15,14 +15,11 @@ exports.eq    = (a, b, msg) -> ok a is b, msg
 exports.cmp   = (a, b, msg) -> ok JSON.stringify(a) is JSON.stringify(b), msg
 exports.close = (a, b, msg) -> ok Math.abs(a - b) < 0.01, msg
 
-red   = (t) -> "\u001b[31m#{t}\u001b[0m"
-green = (t) -> "\u001b[32m#{t}\u001b[0m"
-
 exports.done  = ->
   if not_ok_count is 0
     not_ok_label = not_ok_count
   else
     not_ok_label = red(not_ok_count)
-  console.log " #{green(ok_count)} passed, #{not_ok_label} failed"
+  console.log " #{ok_count} passed, #{not_ok_label} failed"
 
 exports.ok = ok
