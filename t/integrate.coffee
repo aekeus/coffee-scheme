@@ -23,4 +23,6 @@ t.eq evaluate(expression, e), 11, 'simple expression evaluated'
 expression = p.read_from p.tokenize '(begin (define a 1) (define b 2) (if a a b))'
 t.eq evaluate(expression, e), 1, 'if expression evaluated'
 
+expression = p.read_from p.tokenize '(begin (define a 1) a)'
+t.eq evaluate(expression, e), 1, 'symbol lookup works'
 t.done()

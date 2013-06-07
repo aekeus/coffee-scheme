@@ -14,6 +14,7 @@ process.stdin.setEncoding('ascii')
 console.log "\\h - help"
 data = ''
 process.stdin.on 'data', (chunk) ->
+  chunk = chunk.replace("\n", "")
   if chunk.match /\\ds/g
     console.log e
   else if chunk.match /\\q/g
