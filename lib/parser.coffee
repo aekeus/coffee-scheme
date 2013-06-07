@@ -14,7 +14,7 @@ class Parser
     else
       parseFloat(v)
 
-  read: (s) -> @read_from @tokenize s
+  parse: (s) -> @read_from @tokenize s
 
   read_from: (tokens, d=0) ->
     if tokens.length is 0
