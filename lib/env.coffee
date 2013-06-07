@@ -1,3 +1,5 @@
+Symbol = require('../lib/symbol.coffee').Symbol
+
 class Environment
   constructor: (params, args, outer) ->
     for p, i in params

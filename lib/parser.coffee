@@ -16,19 +16,28 @@ class Parser
 
   read: (s) -> @read_from @tokenize s
 
-  read_from: (tokens) ->
+  read_from: (tokens, d=0) ->
     if tokens.length is 0
       throw "unexpected EOF"
     token = tokens.shift()
     if token is '('
       L = []
       while tokens[0] isnt ')'
-        L.push @read_from tokens
-      tokens.pop()
+        L.push @read_from tokens, d+1
+      tokens.shift()
       L
     else if token is ')'
       throw 'unexpected token'
     else
       @atom token
+
+  toString: (tree) ->
+    if tree instanceof Array
+      '(' + (@toString(e) for e in tree).join(' ') + ')'
+    else
+      tree.toString()
+
+  repl: (prompt='>') ->
+
 
 exports.Parser = Parser

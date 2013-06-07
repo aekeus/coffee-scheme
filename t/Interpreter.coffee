@@ -17,14 +17,14 @@ t.eq evaluate( ['if', 0, 5, 6], e ), 6, 'if handles else'
 t.ok evaluate( ['define', 'blag', 99], e ), 'define value in env'
 t.eq e['blag'], 99, 'definition stuck'
 
-t.ok evaluate( ['set!', 'blag', 97], e ), 'set! value in env'
-t.eq e['blag'], 97, 'set! stuck'
-
 t.ok evaluate( [new Symbol('+'), 1, 2], e ) is 3, 'function application'
 
 l = evaluate( ['lambda', [new Symbol('z')], [new Symbol('+'), new Symbol('z'), 1]], e)
 t.eq l(5), 6, 'lambda works'
 
 t.ok evaluate( ['begin', 1, 2, 3], e) is 3, 'begin works'
+
+t.ok evaluate( [new Symbol('set!'), 'blag', 97], e ), 'set! value in env'
+t.eq e['blag'], 97, 'set! stuck'
 
 t.done()
