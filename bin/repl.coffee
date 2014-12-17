@@ -12,7 +12,7 @@ process.stdin.resume()
 process.stdin.setEncoding('ascii')
 
 console.log "\\h - help"
-data = ''
+
 process.stdin.on 'data', (chunk) ->
   chunk = chunk.replace("\n", "")
   if chunk.match /\\ds/g
@@ -23,6 +23,9 @@ process.stdin.on 'data', (chunk) ->
     console.log "\\ds - display symbol table for global environment"
     console.log "\\q  - quit"
   else
-    console.log evaluate(p.read_from(p.tokenize(chunk)), e)
+    try
+      console.log evaluate(p.read_from(p.tokenize(chunk)), e)
+    catch err
+      console.log err.toString()
 
 process.stdin.on 'end', ->
