@@ -2,7 +2,7 @@ evaluate          = require('../lib/interp.coffee').evaluate
 Environment       = require('../lib/env.coffee').Environment
 GlobalEnvironment = require('../lib/env.coffee').GlobalEnvironment
 Symbol            = require('../lib/symbol.coffee').Symbol
-Parser            = require('../lib/Parser.coffee').Parser
+Parser            = require('../lib/parser.coffee').Parser
 
 ge = new GlobalEnvironment()
 e = new Environment([], [], ge)

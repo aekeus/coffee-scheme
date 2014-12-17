@@ -1,0 +1,12 @@
+{
+  "name": "CoffeeScheme",
+  "description": "Scheme in CoffeeScript",
+  "version": "0.0.1",
+  "devDependencies": {
+      "tap": "*",
+			"coffee-script": "*"
+  },
+  "scripts": {
+     "test": "tap ./test"
+  }
+}
