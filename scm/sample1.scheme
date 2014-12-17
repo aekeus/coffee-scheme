@@ -1,3 +1,6 @@
 (define a 1)
 (define b 2)
 (+ a b)
+
+(define sq (lambda (x) (* x x)))
+(sq 4)
