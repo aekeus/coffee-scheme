@@ -2,7 +2,7 @@ fs = require 'fs'
 
 evaluate          = require('../lib/interp.coffee').evaluate
 Environment       = require('../lib/env.coffee').Environment
-GlobalEnvironment = require('../lib/env.coffee').GlobalEnvironment
+GlobalEnvironment = require('../lib/global.coffee').GlobalEnvironment
 Symbol            = require('../lib/symbol.coffee').Symbol
 Parser            = require('../lib/parser.coffee').Parser
 
