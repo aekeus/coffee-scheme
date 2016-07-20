@@ -1,7 +1,7 @@
 test = require('tap').test
 
 Environment = require('../lib/env.coffee').Environment
-GlobalEnvironment = require('../lib/env.coffee').GlobalEnvironment
+GlobalEnvironment = require('../lib/global.coffee').GlobalEnvironment
 
 test "Environment", (t) ->
 

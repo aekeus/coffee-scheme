@@ -19,13 +19,4 @@ class Environment
     for k, v of o
       @[k] = v
 
-class GlobalEnvironment extends Environment
-  constructor: ->
-    @.update
-      '+': (a, b) -> a + b
-      '-': (a, b) -> a - b
-      '*': (a, b) -> a * b
-      '/': (a, b) -> a / b
-
 exports.Environment = Environment
-exports.GlobalEnvironment = GlobalEnvironment
