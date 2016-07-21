@@ -2,3 +2,4 @@
 *.~
 *.coffee~
 node_modules
+*.log

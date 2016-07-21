@@ -7,5 +7,6 @@ class GlobalEnvironment extends Environment
       '-': (a, b) -> a - b
       '*': (a, b) -> a * b
       '/': (a, b) -> a / b
+      'sqrt': (x) -> Math.sqrt(x)
 
 exports.GlobalEnvironment = GlobalEnvironment
