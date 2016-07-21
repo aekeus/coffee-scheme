@@ -1,6 +1,6 @@
 test = require('tap').test
 
-Symbol = require('../lib/symbol.coffee').Symbol
+Symbol = require('../lib/symbol')
 
 test "Symbol", (t) ->
   s = new Symbol('A')

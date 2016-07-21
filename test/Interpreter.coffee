@@ -1,9 +1,10 @@
 test = require('tap').test
 
-evaluate          = require('../lib/interp.coffee').evaluate
-Environment       = require('../lib/env.coffee').Environment
-GlobalEnvironment = require('../lib/global.coffee').GlobalEnvironment
-Symbol            = require('../lib/symbol.coffee').Symbol
+evaluate          = require('../lib/interp')
+Environment       = require('../lib/env')
+GlobalEnvironment = require('../lib/global')
+Symbol            = require('../lib/symbol
+')
 
 test "Interpreter", (t) ->
 

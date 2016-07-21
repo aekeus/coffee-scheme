@@ -1,4 +1,4 @@
-Environment = require("./env").Environment
+Environment = require("./env")
 
 class GlobalEnvironment extends Environment
   constructor: ->
@@ -9,4 +9,4 @@ class GlobalEnvironment extends Environment
       '/': (a, b) -> a / b
       'sqrt': (x) -> Math.sqrt(x)
 
-exports.GlobalEnvironment = GlobalEnvironment
+module.exports = GlobalEnvironment

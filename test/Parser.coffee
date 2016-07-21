@@ -1,7 +1,7 @@
 test = require('tap').test
 
-Parser = require('../lib/parser.coffee').Parser
-Symbol = require('../lib/symbol.coffee').Symbol
+Parser = require('../lib/parser')
+Symbol = require('../lib/symbol')
 
 test "Parser", (t) ->
 

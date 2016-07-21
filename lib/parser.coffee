@@ -1,4 +1,4 @@
-Symbol = require('../lib/symbol.coffee').Symbol
+Symbol = require('../lib/symbol')
 
 class Parser
   constructor: ->
@@ -40,4 +40,4 @@ class Parser
   repl: (prompt='>') ->
 
 
-exports.Parser = Parser
+module.exports = Parser

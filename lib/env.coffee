@@ -1,4 +1,4 @@
-Symbol = require('../lib/symbol.coffee').Symbol
+Symbol = require('../lib/symbol')
 
 class Environment
   constructor: (params, args, outer) ->
@@ -19,4 +19,4 @@ class Environment
     for k, v of o
       @[k] = v
 
-exports.Environment = Environment
+module.exports = Environment

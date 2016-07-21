@@ -1,5 +1,5 @@
-Environment = require('../lib/env.coffee').Environment
-Symbol      = require('../lib/symbol.coffee').Symbol
+Environment = require('../lib/env')
+Symbol      = require('../lib/symbol')
 
 isSymbol = (sym, s) -> sym.toString() is s
 
@@ -39,4 +39,4 @@ evaluate = (x, env) ->
     func = exps.shift()
     func.apply null, exps
 
-exports.evaluate = evaluate
+module.exports = evaluate
